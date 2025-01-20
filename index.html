@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 cudów Tarek Fridhi 2ta</title>
+    <link rel="stylesheet" href="7 cudów CSS.css">
+</head>
+<body id="glowna">
+    <header>
+        <h1>7 cudów świata</h1>
+    </header>
+
+    <nav class="nav-phone">
+        <ul>
+            <li><a href="#tabela">Tabela</a></li>
+            <li><a href="#mapa">Mapa</a></li>
+            <li><a href="#lista">Lista</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#film">Film</a></li>
+            <li><a href="#formularz">Formularz</a></li>
+        </ul>
+    </nav>
+
+    <main class="iframe-container">
+        <nav class="nav-tablet-desktop">
+            <button class="dropdown-btn">Menu</button>
+            <div class="dropdown-content">
+                <ul>
+                    <li><a href="#tabela">Tabela</a></li>
+                    <li><a href="#mapa">Mapa</a></li>
+                    <li><a href="#lista">Lista</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#film">Film</a></li>
+                    <li><a href="#formularz">Formularz</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section id="tabela">
+            <iframe src="tabela.html" class="content-frame" width="100%" height="500px"></iframe>
+            <a href="#glowna" class="back-to-top">Powrót na górę</a>
+        </section>
+        <section id="mapa">
+            <iframe src="mapa.html" class="content-frame" width="100%" height="500px"></iframe>
+            <a href="#glowna" class="back-to-top">Powrót na górę</a>
+        </section>
+        <section id="lista">
+            <iframe src="lista.html" class="content-frame" width="100%" height="500px"></iframe>
+            <a href="#glowna" class="back-to-top">Powrót na górę</a>
+        </section>
+        <section id="galeria">
+            <iframe src="galeria.html" class="content-frame" width="100%" height="500px"></iframe>
+            <a href="#glowna" class="back-to-top">Powrót na górę</a>
+        </section>
+        <section id="film">
+            <iframe src="film.html" class="content-frame" width="100%" height="500px"></iframe>
+            <a href="#glowna" class="back-to-top">Powrót na górę</a>
+        </section>
+        <section id="formularz">
+            <iframe src="ankieta.html" class="content-frame" width="100%" height="500px"></iframe>
+            <a href="#glowna" class="back-to-top">Powrót na górę</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Tarek Fridhi 2ta</p>
+    </footer>
+
+    <script>
+        document.querySelector('.dropdown-btn').addEventListener('click', function() {
+            document.querySelector('.dropdown-content').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

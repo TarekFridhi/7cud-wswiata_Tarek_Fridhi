@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="7 cudów CSS.css">
+</head>
+<body>
+    <section class="gallery" id="galeria">
+        
+        <div class="gallery-container">
+            <img src="zdjęcia/wielki mur.jpg" alt="Wielki Mur" class="gallery-slide">
+            <img src="zdjęcia/koloseum.jpg" alt="Koloseum" class="gallery-slide">
+            <img src="zdjęcia/Machu.jpg" alt="Machu Picchu" class="gallery-slide">
+            <img src="zdjęcia/Meksyk.jpg" alt="Piramidy w Meksyku" class="gallery-slide">
+            <img src="zdjęcia/Taj.jpg" alt="Taj Mahal" class="gallery-slide">
+            <img src="zdjęcia/Petra.jpg" alt="Petra" class="gallery-slide">
+            <img src="zdjęcia/Jesus.jpg" alt="Posąg Jezusa w Rio de Janeiro" class="gallery-slide">
+        </div>
+
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+        <div class="gallery-thumbnails">
+            <img src="zdjęcia/wielki mur.jpg" alt="Wielki Mur" onclick="currentSlide(0)">
+            <img src="zdjęcia/koloseum.jpg" alt="Koloseum" onclick="currentSlide(1)">
+            <img src="zdjęcia/Machu.jpg" alt="Machu Picchu" onclick="currentSlide(2)">
+            <img src="zdjęcia/Meksyk.jpg" alt="Piramidy w Meksyku" onclick="currentSlide(3)">
+            <img src="zdjęcia/Taj.jpg" alt="Taj Mahal" onclick="currentSlide(4)">
+            <img src="zdjęcia/Petra.jpg" alt="Petra" onclick="currentSlide(5)">
+            <img src="zdjęcia/Jesus.jpg" alt="Posąg Jezusa w Rio de Janeiro" onclick="currentSlide(6)">
+        </div>
+    </section>
+
+    <script>
+        let slideIndex = 0;
+        showSlides(slideIndex);
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("gallery-slide");
+            if (n >= slides.length) { slideIndex = 0 }
+            if (n < 0) { slideIndex = slides.length - 1 }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex].style.display = "block";
+        }
+
+        setInterval(() => {
+            changeSlide(1);
+        }, 3000);
+    </script>
+</body>
+</html>
